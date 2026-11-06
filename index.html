@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#10091d" />
+    <title>برای دخمل خوشگلهل</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap");
+      :root {
+        --bg: #0d0718;
+        --violet: #a78bfa;
+        --pink: #e9a8ff;
+        --white: #fbf7ff;
+        --muted: #b8a9ca;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--white);
+        font-family: Vazirmatn, Tahoma, sans-serif;
+        overflow-x: hidden;
+      }
+      body:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -3;
+        background:
+          radial-gradient(ellipse at 50% 0%, #48216c 0%, transparent 45%),
+          radial-gradient(ellipse at 8% 75%, #32124d 0%, transparent 34%),
+          radial-gradient(ellipse at 95% 90%, #251044 0%, transparent 32%),
+          linear-gradient(145deg, #090511, #160b25 55%, #0a0612);
+      }
+      body:after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        opacity: 0.12;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+      }
+      .aurora {
+        position: fixed;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        filter: blur(100px);
+        opacity: 0.22;
+        pointer-events: none;
+        z-index: -1;
+        animation: drift 12s ease-in-out infinite alternate;
+      }
+      .a1 {
+        background: #9333ea;
+        top: -220px;
+        right: -100px;
+      }
+      .a2 {
+        background: #c026d3;
+        bottom: -230px;
+        left: -100px;
+        animation-delay: -5s;
+      }
+      @keyframes drift {
+        to {
+          transform: translate(55px, 45px) scale(1.15);
+        }
+      }
+      #stars {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+      }
+      .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0.45;
+        animation: twinkle 3s ease-in-out infinite alternate;
+      }
+      @keyframes twinkle {
+        to {
+          opacity: 0.12;
+          transform: scale(0.55);
+        }
+      }
+      .wrap {
+        width: min(100% - 30px, 900px);
+        margin: auto;
+        padding: 30px 0 55px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 48px;
+        color: #cbbce0;
+        font-size: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
+      .brand-mark {
+        width: 28px;
+        height: 28px;
+        border: 1px solid #a78bfa66;
+        border-radius: 9px;
+        display: grid;
+        place-items: center;
+        color: #d8b4fe;
+      }
+      .pill {
+        border: 1px solid #ffffff20;
+        background: #ffffff08;
+        padding: 7px 13px;
+        border-radius: 99px;
+        backdrop-filter: blur(12px);
+      }
+      .hero {
+        text-align: center;
+        margin: 0 auto 38px;
+        max-width: 680px;
+        animation: rise 0.9s ease both;
+      }
+      .kicker {
+        color: #d8b4fe;
+        font-size: 11px;
+        letter-spacing: 3px;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: clamp(34px, 7vw, 66px);
+        line-height: 1.35;
+        margin: 13px 0 10px;
+        font-weight: 900;
+        letter-spacing: -1.5px;
+      }
+      h1 span {
+        background: linear-gradient(
+          100deg,
+          #fff 5%,
+          #e9d5ff 40%,
+          #c084fc 75%,
+          #f0abfc
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 38px #c084fc25;
+      }
+      .lead {
+        color: #c6b7d7;
+        font-size: 14px;
+        line-height: 2.1;
+        margin: 0 auto;
+        max-width: 520px;
+      }
+      .orbit {
+        height: 105px;
+        display: grid;
+        place-items: center;
+        margin: 10px 0 18px;
+      }
+      .orbit-core {
+        width: 65px;
+        height: 65px;
+        border-radius: 23px;
+        display: grid;
+        place-items: center;
+        font-size: 28px;
+        background: linear-gradient(145deg, #c4a3ff, #7c3aed);
+        box-shadow:
+          0 0 0 9px #a78bfa12,
+          0 0 55px #a855f766;
+        transform: rotate(-8deg);
+        animation: float 4s ease-in-out infinite;
+      }
+      @keyframes float {
+        50% {
+          transform: translateY(-8px) rotate(2deg);
+        }
+      }
+      .envelope-area {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0 30px;
+      }
+      .envelope {
+        width: min(100%, 390px);
+        height: 220px;
+        position: relative;
+        cursor: pointer;
+        filter: drop-shadow(0 22px 40px #0008);
+        transition: 0.35s;
+      }
+      .envelope:hover {
+        transform: translateY(-5px);
+      }
+      .env-back {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, #6d3ca4, #3d1e62);
+        border-radius: 15px;
+      }
+      .env-paper {
+        position: absolute;
+        left: 7%;
+        right: 7%;
+        top: 10px;
+        height: 180px;
+        background: linear-gradient(145deg, #fffaff, #eadcff);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #633b91;
+        text-align: center;
+        line-height: 1.8;
+        padding: 18px;
+        font-weight: 700;
+        transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        box-shadow: 0 3px 20px #0002;
+      }
+      .env-front {
+        position: absolute;
+        inset: 0;
+        border-radius: 0 0 15px 15px;
+        background: linear-gradient(145deg, #8b5cf6, #5b21b6);
+        clip-path: polygon(0 0, 50% 57%, 100% 0, 100% 100%, 0 100%);
+        z-index: 2;
+      }
+      .env-flap {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(145deg, #c4a3ff, #8b5cf6);
+        clip-path: polygon(0 0, 100% 0, 50% 58%);
+        transform-origin: top;
+        transition: transform 0.65s ease;
+        z-index: 3;
+      }
+      .seal {
+        position: absolute;
+        z-index: 4;
+        left: 50%;
+        top: 54%;
+        transform: translate(-50%, -50%);
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(145deg, #f0abfc, #a855f7);
+        box-shadow: 0 4px 16px #2b124a88;
+        color: white;
+        font-size: 19px;
+        transition: 0.3s;
+      }
+      .envelope.open .env-flap {
+        transform: rotateX(180deg);
+        z-index: 0;
+      }
+      .envelope.open .env-paper {
+        transform: translateY(-105px);
+      }
+      .envelope.open .seal {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.3);
+      }
+      .hint {
+        font-size: 11px;
+        color: #b9a7ce;
+        text-align: center;
+        margin-top: -12px;
+        margin-bottom: 28px;
+      }
+      .panel {
+        position: relative;
+        padding: clamp(22px, 5vw, 42px);
+        border-radius: 28px;
+        border: 1px solid #ffffff20;
+        background: linear-gradient(135deg, #ffffff12, #ffffff05);
+        backdrop-filter: blur(22px);
+        box-shadow:
+          0 25px 90px #0005,
+          inset 0 1px #ffffff16;
+        overflow: hidden;
+      }
+      .panel:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 12%;
+        width: 42%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #e9d5ff, transparent);
+      }
+      .panel-head {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 23px;
+      }
+      .panel-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: #a78bfa1c;
+        border: 1px solid #c4b5fd30;
+        color: #e9d5ff;
+        font-size: 19px;
+      }
+      .panel-head strong {
+        font-size: 15px;
+      }
+      .panel-head small {
+        display: block;
+        color: #a999bc;
+        font-size: 11px;
+        margin-top: 3px;
+      }
+      .letter {
+        font-size: 14px;
+        line-height: 2.35;
+        color: #eee5f8;
+      }
+      .letter p {
+        margin: 0 0 15px;
+      }
+      .letter p:last-child {
+        margin: 0;
+      }
+      .letter .em {
+        color: #e9d5ff;
+        font-weight: 700;
+      }
+      .divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #ffffff20, transparent);
+        margin: 27px 0;
+      }
+      .ask {
+        text-align: center;
+        padding: 8px 0 0;
+      }
+      .ask h2 {
+        font-size: clamp(20px, 4vw, 27px);
+        margin: 0 0 8px;
+      }
+      .ask p {
+        font-size: 12px;
+        color: #b9a9ca;
+        margin: 0 0 22px;
+      }
+      .answers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+      }
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: 0;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s,
+          background 0.2s;
+      }
+      .choice {
+        min-height: 56px;
+        border-radius: 15px;
+        padding: 12px 15px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        background: #ffffff0b;
+        border: 1px solid #ffffff1e;
+      }
+      .choice:hover {
+        transform: translateY(-3px);
+        background: #ffffff16;
+        box-shadow: 0 10px 28px #0003;
+      }
+      .choice.primary {
+        background: linear-gradient(110deg, #9333ea, #a855f7 55%, #c084fc);
+        border: 0;
+        box-shadow: 0 9px 30px #9333ea55;
+      }
+      .choice.full {
+        grid-column: 1/-1;
+      }
+      .response {
+        display: none;
+        margin-top: 17px;
+        padding: 19px;
+        border-radius: 18px;
+        background: #a78bfa12;
+        border: 1px solid #c4b5fd35;
+        text-align: right;
+        line-height: 2;
+        animation: rise 0.35s ease;
+      }
+      .response.show {
+        display: block;
+      }
+      .response b {
+        display: block;
+        color: #e9d5ff;
+        margin-bottom: 5px;
+      }
+      .copy {
+        margin-top: 12px;
+        padding: 8px 13px;
+        border-radius: 10px;
+        color: #e9d5ff;
+        background: #ffffff0c;
+        border: 1px solid #ffffff22;
+        font-size: 11px;
+      }
+      .end {
+        text-align: center;
+        color: #a898b8;
+        font-size: 11px;
+        line-height: 2;
+        margin-top: 27px;
+      }
+      .end .tiny {
+        font-size: 20px;
+        color: #d8b4fe;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: 0.8s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @media (max-width: 520px) {
+        .nav {
+          margin-bottom: 32px;
+        }
+        .answers {
+          grid-template-columns: 1fr;
+        }
+        .choice.full {
+          grid-column: auto;
+        }
+        .envelope {
+          height: 195px;
+        }
+        .env-paper {
+          height: 160px;
+        }
+        .panel {
+          border-radius: 22px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Premium motion + mobile refinements */
+      .envelope {
+        perspective: 1100px;
+        transform-style: preserve-3d;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+      .env-flap {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .env-paper {
+        z-index: 1;
+        transform: translateY(0);
+        transition:
+          transform 1.05s cubic-bezier(0.18, 0.82, 0.22, 1),
+          box-shadow 0.8s ease;
+      }
+      .envelope.open .env-paper {
+        transform: translateY(-138px) scale(1.025);
+        box-shadow: 0 18px 42px #0005;
+      }
+      .envelope.open .env-flap {
+        transform: rotateX(180deg);
+      }
+      .envelope.open .env-front {
+        z-index: 2;
+      }
+      .envelope.open .seal {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.25) rotate(25deg);
+      }
+      .envelope:focus-visible {
+        outline: 2px solid #e9d5ff;
+        outline-offset: 8px;
+        border-radius: 16px;
+      }
+      #letterPanel {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(28px) scale(0.985);
+        transition:
+          opacity 0.85s ease,
+          transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1),
+          visibility 0.85s;
+      }
+      #letterPanel.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      .letter p {
+        opacity: 0;
+        transform: translateY(12px);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+      #letterPanel.visible .letter p {
+        opacity: 1;
+        transform: none;
+      }
+      #letterPanel.visible .letter p:nth-child(1) {
+        transition-delay: 0.08s;
+      }
+      #letterPanel.visible .letter p:nth-child(2) {
+        transition-delay: 0.16s;
+      }
+      #letterPanel.visible .letter p:nth-child(3) {
+        transition-delay: 0.24s;
+      }
+      #letterPanel.visible .letter p:nth-child(4) {
+        transition-delay: 0.32s;
+      }
+      #letterPanel.visible .letter p:nth-child(5) {
+        transition-delay: 0.4s;
+      }
+      #letterPanel.visible .letter p:nth-child(6) {
+        transition-delay: 0.48s;
+      }
+      #letterPanel.visible .letter p:nth-child(7) {
+        transition-delay: 0.56s;
+      }
+      #letterPanel.visible .letter p:nth-child(8) {
+        transition-delay: 0.64s;
+      }
+      .choice:disabled {
+        opacity: 0.58;
+        cursor: wait;
+        transform: none;
+      }
+      .response {
+        overflow-wrap: anywhere;
+      }
+      .response .status {
+        display: block;
+        margin-top: 10px;
+        font-size: 11px;
+        color: #c4b5fd;
+      }
+      .response .status.error {
+        color: #fda4af;
+      }
+      @media (max-width: 520px) {
+        .wrap {
+          width: min(100% - 24px, 900px);
+          padding: 20px 0 36px;
+        }
+        .nav {
+          margin-bottom: 26px;
+          gap: 10px;
+          font-size: 10px;
+        }
+        .pill {
+          padding: 6px 9px;
+        }
+        .hero {
+          margin-bottom: 25px;
+        }
+        .kicker {
+          font-size: 9px;
+          letter-spacing: 2px;
+        }
+        .lead {
+          font-size: 13px;
+          padding: 0 5px;
+        }
+        .orbit {
+          height: 82px;
+          margin: 5px 0 12px;
+        }
+        .orbit-core {
+          width: 58px;
+          height: 58px;
+        }
+        .envelope-area {
+          margin: 20px 0 25px;
+        }
+        .envelope {
+          width: min(100%, 350px);
+          height: 185px;
+        }
+        .env-paper {
+          height: 150px;
+          font-size: 13px;
+        }
+        .envelope.open .env-paper {
+          transform: translateY(-112px) scale(1.015);
+        }
+        .panel {
+          padding: 22px 18px;
+          border-radius: 20px;
+        }
+        .letter {
+          font-size: 13px;
+          line-height: 2.2;
+        }
+        .ask h2 {
+          font-size: 21px;
+        }
+        .choice {
+          min-height: 54px;
+          font-size: 13px;
+        }
+      }
+      @media (max-width: 360px) {
+        h1 {
+          font-size: 32px;
+        }
+        .panel-head strong {
+          font-size: 13px;
+        }
+        .letter {
+          font-size: 12px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .letter p {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+    <div id="stars"></div>
+    <div class="wrap">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand-mark">✦</span> A LETTER FOR YOU
+        </div>
+        <span class="pill">با احترام به انتخابت</span>
+      </nav>
+
+      <header class="hero">
+        <div class="kicker">A LITTLE SOMETHING FROM MY HEART</div>
+        <div class="orbit"><div class="orbit-core">♡</div></div>
+        <h1>برای <span>فاطمه</span></h1>
+        <p class="lead">
+          یه چیزی هست که دلم می‌خواد بدون عجله و بدون بحث، بخونیش.<br />این صفحه
+          فقط برای شنیده شدن حرفامه؛ نه برای تحت فشار گذاشتنت.
+        </p>
+      </header>
+
+      <div class="envelope-area">
+        <div
+          class="envelope"
+          id="envelope"
+          role="button"
+          tabindex="0"
+          aria-label="باز کردن نامه"
+          aria-expanded="false"
+        >
+          <div class="env-back"></div>
+          <div class="env-paper">
+           فاطمه دورت بگردم<br />اینو برای تو نوشتم لطفا بادقت بخونیش
+          </div>
+          <div class="env-flap"></div>
+          <div class="env-front"></div>
+          <div class="seal">♡</div>
+        </div>
+      </div>
+      <div class="hint" id="hint">برای باز کردن نامه، روی پاکت بزن</div>
+
+      <main class="panel reveal" id="letterPanel">
+        <div class="panel-head">
+          <div class="panel-icon">✉</div>
+          <div>
+            <strong>حرفایی که می‌خواستم بهت بگم</strong
+            ><small>راه دیگه ای بلئد نبودم برای ابراز ناراحتیم</small>
+          </div>
+        </div>
+        <article class="letter">
+          <p>
+            ببین فاطمه، می‌خوام چند تا حرف بهت بزنم که شاید اون لحظه نتونستم
+            درست بگم.
+          </p>
+          <p>
+            اول از همه واقعاً بابت حرفی که زدم معذرت می‌خوام. می‌دونم تو از
+            همچین حرفی می‌ترسی و منم اینو می‌دونستم، ولی اون لحظه انقدر عصبی
+            بودم که اصلاً حواسم به حرفایی که می‌زدم نبود.
+            <span class="em"
+              >این دلیل نمی‌شه که حق داشته باشم بترسونمت یا کاری کنم کنارم احساس
+              ناامنی کنی.</span
+            >
+          </p>
+          <p>
+            منم از یه چیزی ناراحت بودم؛ از اینکه بهم می‌گفتی خیانت می‌کنم.
+            دوباره سر همون حرف اعصابم به هم ریخت. چیزی که بیشتر از همه اذیتم کرد
+            این بود که احساس کردم منو جایگزین کردی. مشکلم همون حرفی بود که بهم
+            زدی. شاید اشتباه برداشت کردم یا از شدت ناراحتی درست متوجه منظورت
+            نشدم، ولی واقعاً بهم برخورد.
+          </p>
+          <p>
+            با این حال، ناراحتی من توجیهی برای تهدیدی که کردم نیست. باید به‌جای
+            اون حرف، ناراحتیم رو درست بهت می‌گفتم یا بحث رو متوقف می‌کردم.
+          </p>
+          <p>
+            می‌دونم این مدت اشتباهاتی داشتم و شاید با بعضی رفتارام بهت آسیب زدم.
+            حتی گاهی با خودم فکر می‌کنم شاید بهتره فاصله بگیرم، چون نمی‌خوام با
+            رفتار اشتباهم بیشتر ناراحتت کنم. ولی دلم می‌خواد اگر خودت هم بخوای،
+            برای درست کردنش تلاش کنیم.
+          </p>
+          <p>
+            قول می‌دم برای کنترل عصبانیت و رفتارم جدی تلاش کنم. وقتی عصبانی‌ام
+            بحث رو ادامه ندم، آروم بشم و بعد حرف بزنیم. نمی‌خوام فقط قول بدم؛
+            می‌خوام با رفتارم نشون بدم که جدی‌ام.
+          </p>
+          <p>
+            امیدوارم هنوز از چشمت نیفتاده باشم و فرصتی برای جبران داشته باشم.
+            می‌دونم بخشیده شدن با چند تا جمله اتفاق نمی‌افته و بهت زمان می‌دم.
+          </p>
+          <p>
+            ببخش که اون لحظه به‌جای اینکه درست باهات حرف بزنم، ناراحتت کردم.
+            واقعاً متأسفم.
+          </p>
+        </article>
+        <div class="divider"></div>
+        <section class="ask">
+          <h2>قشنگم، تو دوست داری چیکار کنیم؟</h2>
+          <p>هر جوابی بدی، بهش احترام می‌ذارم. لازم نیست عجله کنی.</p>
+          <div class="answers">
+            <button class="choice primary" data-choice="talk">
+              ♡ دوست دارم صحبت کنیم
+            </button>
+            <button class="choice" data-choice="time">به زمان نیاز دارم (چه حرفا فعککک نکنم)</button>
+            <button class="choice full" data-choice="no">
+              فکر می‌کنم بهتره ادامه ندیم(اوووو درسطح کلان دلت فوش میخواد؟)
+            </button>
+          </div>
+          <div class="response" id="response" aria-live="polite">
+            <b id="responseTitle"></b><span id="responseText"></span
+            ><span class="status" id="sendStatus" aria-live="polite"></span
+            ><br />
+            <button class="copy" id="copyBtn">کپی جواب</button>
+          </div>
+        </section>
+      </main>
+      <footer class="end">
+        <span class="tiny">✧</span>قراره با این صفحه جوابت رو عوض کنم؛ فقط
+        می‌خوام حرفم رو بدون دعوا بشنوی.<br />
+      </footer>
+    </div>
+    <script>
+      (() => {
+        "use strict";
+        const stars = document.getElementById("stars");
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        const starCount = window.innerWidth < 600 ? 35 : 65;
+        for (let i = 0; i < starCount; i++) {
+          const s = document.createElement("i");
+          s.className = "star";
+          s.style.left = Math.random() * 100 + "%";
+          s.style.top = Math.random() * 100 + "%";
+          s.style.animationDelay = Math.random() * 4 + "s";
+          s.style.opacity = 0.15 + Math.random() * 0.5;
+          stars.appendChild(s);
+        }
+
+        const env = document.getElementById("envelope");
+        const panel = document.getElementById("letterPanel");
+        const hint = document.getElementById("hint");
+        let opened = false;
+
+        function openLetter() {
+          if (opened) return;
+          opened = true;
+          env.classList.add("open");
+          env.setAttribute("aria-expanded", "true");
+          hint.textContent = "نامه برات باز شد ♡";
+          window.setTimeout(
+            () => {
+              panel.classList.add("visible");
+              panel.scrollIntoView({
+                behavior: reduceMotion ? "auto" : "smooth",
+                block: "start",
+              });
+            },
+            reduceMotion ? 0 : 650,
+          );
+        }
+        env.addEventListener("click", openLetter);
+        env.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openLetter();
+          }
+        });
+
+        const replies = {
+          talk: [
+            "ممنون که حاضری صحبت کنیم.",
+            "هر وقت خودت راحت بودی بهم بگو کی صحبت کنیم. می‌خوام اول به حرفات گوش بدم و بعد با آرامش درباره همه‌چی حرف بزنیم.",
+          ],
+          time: [
+            "باشه، بهت زمان می‌دم.",
+            "لازم نیست همین الان تصمیم بگیری یا جواب بدی. هر وقت آماده بودی خودت بهم خبر بده. به زمان و فضای شخصیت احترام می‌ذارم.",
+          ],
+          no: [
+            "ممنون که صادقانه گفتی.",
+            "ناراحتم، ولی به تصمیمت احترام می‌ذارم و برای تغییر نظرت بهت فشار نمیارم. امیدوارم حالت خوب باشه.",
+          ],
+        };
+        const labels = {
+          talk: "دوست دارم صحبت کنیم",
+          time: "به زمان نیاز دارم",
+          no: "فکر می‌کنم بهتره ادامه ندیم",
+        };
+
+        let answer = "";
+        let selected = false;
+        const response = document.getElementById("response");
+        const responseTitle = document.getElementById("responseTitle");
+        const responseText = document.getElementById("responseText");
+        const sendStatus = document.getElementById("sendStatus");
+        const copyBtn = document.getElementById("copyBtn");
+        const choiceButtons = [...document.querySelectorAll("[data-choice]")];
+
+        choiceButtons.forEach((button) =>
+          button.addEventListener("click", async () => {
+            if (selected) return;
+            const key = button.dataset.choice;
+            const reply = replies[key];
+            if (!reply) return;
+
+            selected = true;
+            answer = reply.join("\n");
+            responseTitle.textContent = reply[0];
+            responseText.textContent = reply[1];
+            response.classList.add("show");
+            choiceButtons.forEach((b) => (b.disabled = true));
+            sendStatus.classList.remove("error");
+            sendStatus.textContent = "در حال ثبت انتخاب…";
+
+            try {
+              const res = await fetch("/api/choice", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  choice: key,
+                  choiceLabel: labels[key],
+                  responseTitle: reply[0],
+                  responseText: reply[1],
+                  page: location.pathname,
+                }),
+              });
+              const data = await res.json().catch(() => ({}));
+              if (!res.ok || !data.ok)
+                throw new Error(data.error || "ثبت انتخاب انجام نشد.");
+              sendStatus.textContent =
+                "انتخاب با موفقیت ثبت شد. ممنون که صادقانه جواب دادی ♡";
+            } catch (err) {
+              // Do not expose technical details to the recipient. Allow retry without changing the answer.
+              sendStatus.textContent =
+                "ارسال نتیجه انجام نشد؛ لطفاً اتصال اینترنت را بررسی کن و دوباره تلاش کن.";
+              sendStatus.classList.add("error");
+              selected = false;
+              choiceButtons.forEach((b) => (b.disabled = false));
+            }
+          }),
+        );
+
+        copyBtn.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(answer);
+            copyBtn.textContent = "کپی شد ✓";
+          } catch {
+            copyBtn.textContent = "امکان کپی نیست؛ متن را دستی بردار";
+          }
+        });
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries) =>
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  // Panel is revealed by opening the envelope; observer only handles visibility.
+                  observer.unobserve(entry.target);
+                }
+              }),
+            { threshold: 0.12 },
+          );
+          observer.observe(panel);
+        }
+      })();
+    </script>
+  </body>
+</html>
